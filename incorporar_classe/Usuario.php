@@ -6,20 +6,21 @@ namespace Alura\IncorporarClasse;
 
 class Usuario
 {
-    private $nome;
-    private $sobrenome;
-    private $contato;
-    private $cep;
-    private $telefone;
+    private string $nome;
+    private string $sobrenome;
+    private Contato $contato;
+    private Telefone $telefone;
 
     public function __construct(
         string $nome,
         string $sobrenome,
-        Contato $contato
+        Contato $contato,
+        Telefone $telefone
     ) {
         $this->nome = $nome;
         $this->sobrenome = $sobrenome;
         $this->contato = $contato;
+        $this->telefone = $telefone;
     }
 
     public function getNome(): string
@@ -32,13 +33,8 @@ class Usuario
         return $this->sobrenome;
     }
 
-    public function getEnderecoECep(): string
-    {
-        return "$this->endereco $this->cep";
-    }
-
     public function getTelefoneDdd(): string
     {
-        return "({$this->contato->getDdd()}) {$this->contato->getTelefone()}";
+        return $this->telefone->getTelefoneDdd();
     }
 }

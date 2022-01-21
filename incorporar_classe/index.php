@@ -6,16 +6,13 @@ namespace Alura\IncorporarClasse;
 
 require 'Contato.php';
 require 'Usuario.php';
+require 'Telefone.php';
 
-$contato = new Contato(
-    'Rua Vergueiro 3185',
-    '04101-300',
-    '11',
-    '5571-2751',
-    'comercial'
-);
+$telefone = new Telefone('00', '4324-5423', 'Fixo');
 
-$usuario = new Usuario('Giovanni', 'Tempobono', $contato, $cep, $telefone);
+$contato = new Contato('Rua Vergueiro 3185', '04101-300');
+
+$usuario = new Usuario('Giovanni', 'Tempobono', $contato, $telefone);
 
 echo $usuario->getNome();
 
