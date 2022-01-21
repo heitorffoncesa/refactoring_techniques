@@ -4,7 +4,10 @@ namespace Alura\SubstituirNumeroMagico;
 
 class CalculadoraDeSalario
 {
-    private $salario;
+    private string $salario;
+
+    private const INSS = .08;
+    private const IR = .075;
 
     public function __construct(string $salario)
     {
@@ -13,7 +16,6 @@ class CalculadoraDeSalario
 
     public function aplicaDescontos()
     {
-        //pega o salário, desconta o INSS e o IR
-        return $this->salario - $this->salario * 0.08 - $this->salario * 0.075;
+        return $this->salario - $this->salario * self::INSS - $this->salario * self::IR;
     }
 }
