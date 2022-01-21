@@ -4,7 +4,7 @@ namespace Alura\OcultarDelegado;
 
 class Gerente
 {
-    private $nome;
+    private string $nome;
 
     public function __construct(string $nome)
     {

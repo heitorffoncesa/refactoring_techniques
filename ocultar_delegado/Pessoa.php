@@ -4,7 +4,7 @@ namespace Alura\OcultarDelegado;
 
 class Pessoa
 {
-    private $departamento;
+    private Departamento $departamento;
 
     public function __construct(Departamento $departamento)
     {
@@ -14,5 +14,10 @@ class Pessoa
     public function getDepartamento(): Departamento
     {
         return $this->departamento;
+    }
+
+    public function getNomeDoGerente(): string
+    {
+        return $this->departamento->getGerente()->getNome();
     }
 }

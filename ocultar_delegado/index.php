@@ -8,4 +8,7 @@ require 'Pessoa.php';
 
 $maria = new Pessoa(new Departamento(new Gerente('José')));
 
-echo $maria->getDepartamento()->getGerente()->getNome();
+// violando o princípio do menor conhecimento Lei de Demeter (objeto só deve ter conhecimento de objetos próximos)
+// echo $maria->getDepartamento()->getGerente()->getNome();
+
+echo $maria->getNomeDoGerente();
