@@ -5,8 +5,8 @@ namespace Alura\RemoverIntermediario;
 class Funcionario
 {
 
-    private $nome;
-    private $cargo;
+    private string $nome;
+    private string $cargo;
 
     public function __construct(string $nome, string $cargo)
     {
