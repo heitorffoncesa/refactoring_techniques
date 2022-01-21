@@ -5,7 +5,7 @@ namespace Alura\MoverCampo;
 require 'Contato.php';
 require 'Usuario.php';
 
-$contato = new Contato('Rua Vergueiro 3185', '115571-2751');
-$usuario = new Usuario('Giovanni', 'Tempobono', 'giovanni@alura.com.br', $contato);
+$contato = new Contato('Rua teste 3185', '115021-0231', 'mario@teste.com.br');
+$usuario = new Usuario('Mario', 'Costa', $contato);
 
 $usuario->imprimirInformacoes();
