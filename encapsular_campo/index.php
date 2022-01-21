@@ -8,14 +8,15 @@ require 'Empresa.php';
 require 'Funcionario.php';
 
 $alura = new Empresa();
-$funcionario = new Funcionario('Giovanni', 100);
+$funcionario = new Funcionario('Giovanni', 1000);
 
 $alura->adicionarFuncionario($funcionario);
 
-echo $funcionario->salario;
+echo $funcionario->getSalario();
+echo "<br/>";
 
-$funcionario->salario = 500;
+// $funcionario->salario = 500;
 
 $alura->promoveFuncionario($funcionario, 50);
 
-echo $funcionario->salario;
+echo $funcionario->getSalario();
