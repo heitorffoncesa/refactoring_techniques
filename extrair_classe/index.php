@@ -2,9 +2,14 @@
 
 namespace Alura\ExtrairClasse;
 
+require 'Contato.php';
 require 'Usuario.php';
 
-$usuario = new Usuario("Giovanni", "Tempobono", "Rua Vergueiro 3185", "04101-300", "5571-2751", "11");
+$contato = new Contato("Rua teste", "19834-209", "8374-1294", "Fixo", "00");
+$usuario = new Usuario("Giovanni", "Silva", $contato);
 
 echo $usuario->getNome();
+echo "<br/>";
+echo $usuario->getEnderecoECep();
+echo "<br/>";
 echo $usuario->getTelefoneDdd();
